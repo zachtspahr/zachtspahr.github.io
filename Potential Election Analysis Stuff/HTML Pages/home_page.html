@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Data Page</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown 1
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Safe Republican Districts</a>
+                <a class="dropdown-item" href="#">Safe Democratic Districts</a>
+                <a class="dropdown-item" href="#"> Competitive Districts</a>
+ 
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">All Districts</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  District Level Breakdown (Data Section From Pandas)
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">VA-1</a>
+                  <a class="dropdown-item" href="#">VA-2</a>
+                  <a class="dropdown-item" href="#">VA-3</a>
+                  <a class="dropdown-item" href="#">VA-4</a>
+                  <a class="dropdown-item" href="#">VA-5</a>
+                  <a class="dropdown-item" href="#">VA-6</a>
+                  <a class="dropdown-item" href="#">VA-7</a>
+                  <a class="dropdown-item" href="#">VA-8</a>
+                  <a class="dropdown-item" href="#">VA-9</a>
+                  <a class="dropdown-item" href="#">VA-10</a>
+                  <a class="dropdown-item" href="#">VA-11</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">All Districts</a>
+                </div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <div>
+          <header class="header">
+            <h1>VA Congressional Districts Website</h1>
+          </header>
+          <main>
+            <section class="posts">
+              <article class="post">
+                <h3>Basic Description of This Site</h3>
+                <p>This is the home page with some basic data on the congressional districts in Virginia.
+                  I am hoping to generally build up this test site/ make it look better, but I have included
+                  a few graphs to see if I can highlight a few trends in the districts that flipped in the state.
+                  This homework submission might be rough, but I hope that it will gradually get better over time. 
+                  Here are some graphs with some images. These graphs were done in excel because it was easier to graph
+                  data over time in excel rather than python.
+                </p>
+              </article>
+              
+                <p> This is the data from all the congressional districts in VA from the 2008, 2012, 2016,
+                    presidential elections. The goal is to look at the data and see if different types of districts 
+                    are trending in different ways. Also, I hope to look later at how demogrpahics may be playing a 
+                    role in voter preferences. </p>
+          
+            
+              <h5>
+        
+                  <img src="/Users/zspahr/Desktop/Potential Election Analysis Stuff/VA Congressional Districts 538 Gerrymandering Project.png" width="600" height="400" alt="All Districts">
+                </h5>
+              <p>This is a map of Virginia Congressional Districts from 538 Gerrymandering Project Page</p> 
+
+            </section>
+          </main>
+        </div>
+        
+      </body>
+      
+      </html>
+      
+
+
