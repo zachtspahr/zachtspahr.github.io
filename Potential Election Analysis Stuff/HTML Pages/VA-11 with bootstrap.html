@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>VA-11</title>
+      
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      
+      <body>
+      
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="https://zachtspahr.github.io/Potential%20Election%20Analysis%20Stuff/HTML%20Pages/home_page.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/final_data_page.html">Comparisons</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Visualizations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/Solid R page">Safe Republican Districts</a>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA Safe Dem Districts.html">Safe Democratic Districts</a>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/Competitive Districts.html"> Competitive Districts</a>
+           
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential%20Election%20Analysis%20Stuff/HTML%20Pages/all_districts.html">All Districts</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            District Level Breakdown (Data Section From Pandas)
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-1 with Bootstrap Grid.html">VA-1</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-2 with bootstrap.html">VA-2</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-3 with bootstrap.html">VA-3</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-4 with bootstrap.html">VA-4</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-5 with bootstrap.html">VA-5</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-6 with bootstrap.html">VA-6</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-7 with bootstrap.html">VA-7</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-8 with bootstrap.html">VA-8</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-9 with bootstrap.html">VA-9</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-10 with bootstrap.html">VA-10</a>
+                            <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-11 with bootstrap.html">VA-11</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">All Districts</a>
+                          </div>
+                        </li>
+                      
+                    </ul>
+                  </div>
+                </nav>
+  <!-- Creates the Overall Grid -->
+  <div class="container">
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Characteristics of VA-11</h1>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+        <div class="col-md-4">
+            <table border="1" class="dataframe" id="{'VA-10'}">
+                    <thead>
+                        <tr style="text-align: right;">
+                            <th></th>
+                            <th>Statistical Category of Interest</th>
+                            <th>Data Point of that category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                
+                                <th>0</th>
+                                <td>CD</td>
+                                <td>VA-11</td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>Democrat Strength Rating</td>
+                                <td>94</td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>State</td>
+                                <td>Virginia</td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>State Abbreviation</td>
+                                <td>VA</td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>CD#</td>
+                                <td>11</td>
+                              </tr>
+                              <tr>
+                                <th>5</th>
+                                <td>PVI</td>
+                                <td>D+15</td>
+                              </tr>
+                              <tr>
+                                <th>6</th>
+                                <td>2018 Winner</td>
+                                <td>Gerry Connolly</td>
+                              </tr>
+                              <tr>
+                                <th>7</th>
+                                <td>Party</td>
+                                <td>D</td>
+                              </tr>
+                              <tr>
+                                <th>8</th>
+                                <td>flipped_seat</td>
+                                <td>0</td>
+                              </tr>
+                              <tr>
+                                <th>9</th>
+                                <td>Dem Votes</td>
+                                <td>219,191</td>
+                              </tr>
+                              <tr>
+                                <th>10</th>
+                                <td>GOP Votes</td>
+                                <td>83,023</td>
+                              </tr>
+                              <tr>
+                                <th>11</th>
+                                <td>Other Votes</td>
+                                <td>6,051</td>
+                              </tr>
+                              <tr>
+                                <th>12</th>
+                                <td>Dem %</td>
+                                <td>71.10%</td>
+                              </tr>
+                              <tr>
+                                <th>13</th>
+                                <td>GOP %</td>
+                                <td>26.90%</td>
+                              </tr>
+                              <tr>
+                                <th>14</th>
+                                <td>Other %</td>
+                                <td>2.00%</td>
+                              </tr>
+                              <tr>
+                                <th>15</th>
+                                <td>Dem Margin</td>
+                                <td>44.20%</td>
+                              </tr>
+                              <tr>
+                                <th>16</th>
+                                <td>2016 Clinton Margin</td>
+                                <td>38.90%</td>
+                              </tr>
+                              <tr>
+                                <th>17</th>
+                                <td>Swing vs. 2016 Prez</td>
+                                <td>5.30%</td>
+                              </tr>
+                              <tr>
+                                <th>18</th>
+                                <td>2016 Total Votes Cast</td>
+                                <td>361,492</td>
+                              </tr>
+               
+              </tbody>
+            </table>
+        
+        
+      </div>
+      <div class="col-md-4">
+          <table border="1" class="dataframe" id="{'VA-8'}">
+              <thead>
+                <tr style="text-align: right;">
+                  <th></th>
+                  <th>Statistical Category of Interest</th>
+                  <th>Data Point of that category</th>
+                </tr>
+              </thead>
+              <tbody>
+                    <tr>
+                            <th>19</th>
+                            <td>Raw Votes vs. 2016</td>
+                            <td>85.30%</td>
+                          </tr>
+                          <tr>
+                            <th>20</th>
+                            <td>2012 Winner</td>
+                            <td>Obama</td>
+                          </tr>
+                          <tr>
+                            <th>21</th>
+                            <td>2016 winner</td>
+                            <td>Clinton</td>
+                          </tr>
+                          <tr>
+                            <th>22</th>
+                            <td>Pre-Election Rating</td>
+                            <td>Solid D</td>
+                          </tr>
+                          <tr>
+                            <th>23</th>
+                            <td>PVI Performance</td>
+                            <td>29.2</td>
+                          </tr>
+                          <tr>
+                            <th>24</th>
+                            <td>Hold/ Flip</td>
+                            <td>D Hold</td>
+                          </tr>
+                          <tr>
+                            <th>25</th>
+                            <td>Clinton Vote Share</td>
+                            <td>66.9</td>
+                          </tr>
+                          <tr>
+                            <th>26</th>
+                            <td>Trump Vote Share</td>
+                            <td>27.5</td>
+                          </tr>
+                          <tr>
+                            <th>27</th>
+                            <td>Obama 2012</td>
+                            <td>62.5</td>
+                          </tr>
+                          <tr>
+                            <th>28</th>
+                            <td>Romney 2012</td>
+                            <td>36.3</td>
+                          </tr>
+                          <tr>
+                            <th>29</th>
+                            <td>Obama 2008</td>
+                            <td>60.7</td>
+                          </tr>
+                          <tr>
+                            <th>30</th>
+                            <td>McCain 2008</td>
+                            <td>38.5</td>
+                          </tr>
+                          <tr>
+                            <th>31</th>
+                            <td>2016-2012</td>
+                            <td>4.4</td>
+                          </tr>
+                          <tr>
+                            <th>32</th>
+                            <td>2016-2008</td>
+                            <td>6.2</td>
+                          </tr>
+                          <tr>
+                            <th>33</th>
+                            <td>2012-2008</td>
+                            <td>1.8</td>
+                          </tr>
+                          <tr>
+                            <th>34</th>
+                            <td>City Lab Congressional Index</td>
+                            <td>Dense suburban</td>
+                          </tr>
+                          <tr>
+                            <th>35</th>
+                            <td>Last Two Pres Winners</td>
+                            <td>Obama /Clinton</td>
+                          </tr>
+                          <tr>
+                            <th>36</th>
+                            <td>PVI_int</td>
+                            <td>15</td>
+                          </tr>
+                        </tbody>
+                      </table>
+      </div>
+    </div>
