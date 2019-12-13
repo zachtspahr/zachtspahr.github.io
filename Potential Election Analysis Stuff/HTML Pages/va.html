@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <title>VA-1</title>
+      
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      
+      <body>
+      
+              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+              
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="https://zachtspahr.github.io/Potential%20Election%20Analysis%20Stuff/HTML%20Pages/home_page.html">Home <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/final_data_page.html">Comparisons</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Visualizations
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/Solid R page">Safe Republican Districts</a>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA Safe Dem Districts.html">Safe Democratic Districts</a>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/Competitive Districts.html"> Competitive Districts</a>
+           
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="https://zachtspahr.github.io/Potential%20Election%20Analysis%20Stuff/HTML%20Pages/all_districts.html">All Districts</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            District Level Breakdown (Data Section From Pandas)
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-1 with Bootstrap Grid.html">VA-1</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-2 with bootstrap.html">VA-2</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-3 with bootstrap.html">VA-3</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-4 with bootstrap.html">VA-4</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-5 with bootstrap.html">VA-5</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-6 with bootstrap.html">VA-6</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-7 with bootstrap.html">VA-7</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-8 with bootstrap.html">VA-8</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-9 with bootstrap.html">VA-9</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-10 with bootstrap.html">VA-10</a>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/VA-11 with bootstrap.html">VA-11</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="https://zachtspahr.github.io/Potential Election Analysis Stuff/HTML Pages/va.html">All Districts</a>
+                            </div>
+                          </li>
+                      
+                    </ul>
+                  </div>
+                </nav>
+  
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CD</th>
+      <th>State</th>
+      <th>State Abbreviation</th>
+      <th>CD#</th>
+      <th>PVI</th>
+      <th>2018 Winner</th>
+      <th>Party</th>
+      <th>flipped_seat</th>
+      <th>Dem Votes</th>
+      <th>GOP Votes</th>
+      <th>Other Votes</th>
+      <th>Dem %</th>
+      <th>GOP %</th>
+      <th>Other %</th>
+      <th>Dem Margin</th>
+      <th>2016 Clinton Margin</th>
+      <th>Swing vs. 2016 Prez</th>
+      <th>2016 Total Votes Cast</th>
+      <th>Raw Votes vs. 2016</th>
+      <th>2012 Winner</th>
+      <th>2016 winner</th>
+      <th>Pre-Election Rating</th>
+      <th>PVI Performance</th>
+      <th>Hold/ Flip</th>
+      <th>Clinton Vote Share</th>
+      <th>Trump Vote Share</th>
+      <th>Obama 2012</th>
+      <th>Romney 2012</th>
+      <th>Obama 2008</th>
+      <th>McCain 2008</th>
+      <th>2016-2012</th>
+      <th>2016-2008</th>
+      <th>2012-2008</th>
+      <th>City Lab Congressional Index</th>
+      <th>Last Two Pres Winners</th>
+      <th>PVI_int</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>VA-1</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>1</td>
+      <td>R+8</td>
+      <td>Rob Wittman</td>
+      <td>R</td>
+      <td>0.0</td>
+      <td>148,464</td>
+      <td>183,250</td>
+      <td>387</td>
+      <td>44.70%</td>
+      <td>55.20%</td>
+      <td>0.10%</td>
+      <td>-10.50%</td>
+      <td>-12.40%</td>
+      <td>1.90%</td>
+      <td>395,784</td>
+      <td>83.90%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Solid R</td>
+      <td>2.5</td>
+      <td>R Hold</td>
+      <td>41.2</td>
+      <td>53.6</td>
+      <td>43.4</td>
+      <td>55.3</td>
+      <td>43.8</td>
+      <td>55.4</td>
+      <td>2.2</td>
+      <td>2.6</td>
+      <td>0.4</td>
+      <td>Rural-suburban mix</td>
+      <td>Romney/Trump</td>
+      <td>-8</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>VA-2</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>2</td>
+      <td>R+3</td>
+      <td>Elaine Luria</td>
+      <td>D</td>
+      <td>1.0</td>
+      <td>139,571</td>
+      <td>133,458</td>
+      <td>371</td>
+      <td>51.10%</td>
+      <td>48.80%</td>
+      <td>0.10%</td>
+      <td>2.20%</td>
+      <td>-3.40%</td>
+      <td>5.60%</td>
+      <td>326,766</td>
+      <td>83.70%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Toss Up</td>
+      <td>5.2</td>
+      <td>D Flip</td>
+      <td>45.4</td>
+      <td>48.8</td>
+      <td>48.2</td>
+      <td>50.5</td>
+      <td>47.9</td>
+      <td>51.1</td>
+      <td>2.8</td>
+      <td>2.5</td>
+      <td>0.3</td>
+      <td>Dense suburban</td>
+      <td>Romney/Trump</td>
+      <td>-3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>VA-3</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>3</td>
+      <td>D+16</td>
+      <td>Bobby Scott</td>
+      <td>D</td>
+      <td>0.0</td>
+      <td>198,615</td>
+      <td>0</td>
+      <td>19,107</td>
+      <td>91.20%</td>
+      <td>0.00%</td>
+      <td>8.80%</td>
+      <td>91.20%</td>
+      <td>31.50%</td>
+      <td>NaN</td>
+      <td>325,478</td>
+      <td>66.90%</td>
+      <td>Obama</td>
+      <td>Clinton</td>
+      <td>Solid D</td>
+      <td>75.2</td>
+      <td>D Hold</td>
+      <td>63.6</td>
+      <td>31.9</td>
+      <td>67.6</td>
+      <td>31.3</td>
+      <td>65.4</td>
+      <td>33.9</td>
+      <td>4.0</td>
+      <td>1.8</td>
+      <td>2.2</td>
+      <td>Dense suburban</td>
+      <td>Obama /Clinton</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>VA-4</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>4</td>
+      <td>D+10</td>
+      <td>Don McEachin</td>
+      <td>D</td>
+      <td>0.0</td>
+      <td>187,642</td>
+      <td>107,706</td>
+      <td>4,506</td>
+      <td>62.60%</td>
+      <td>35.90%</td>
+      <td>1.50%</td>
+      <td>26.70%</td>
+      <td>21.40%</td>
+      <td>5.30%</td>
+      <td>364,550</td>
+      <td>82.30%</td>
+      <td>Obama</td>
+      <td>Clinton</td>
+      <td>Solid D</td>
+      <td>16.7</td>
+      <td>D Hold</td>
+      <td>58.7</td>
+      <td>37.1</td>
+      <td>60.3</td>
+      <td>38.5</td>
+      <td>60.1</td>
+      <td>39.1</td>
+      <td>1.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Rural-suburban mix</td>
+      <td>Obama /Clinton</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>VA-5</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>5</td>
+      <td>R+6</td>
+      <td>Denver Riggleman</td>
+      <td>R</td>
+      <td>0.0</td>
+      <td>145,040</td>
+      <td>165,339</td>
+      <td>547</td>
+      <td>46.60%</td>
+      <td>53.20%</td>
+      <td>0.20%</td>
+      <td>-6.50%</td>
+      <td>-11.00%</td>
+      <td>4.50%</td>
+      <td>367,564</td>
+      <td>84.60%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Lean R</td>
+      <td>0.5</td>
+      <td>R Hold</td>
+      <td>42.3</td>
+      <td>53.4</td>
+      <td>45.9</td>
+      <td>52.5</td>
+      <td>46.8</td>
+      <td>52.2</td>
+      <td>3.6</td>
+      <td>4.5</td>
+      <td>0.9</td>
+      <td>Pure rural</td>
+      <td>Romney/Trump</td>
+      <td>-6</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>VA-6</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>6</td>
+      <td>R+13</td>
+      <td>Ben Cline</td>
+      <td>R</td>
+      <td>0.0</td>
+      <td>113,133</td>
+      <td>167,957</td>
+      <td>287</td>
+      <td>40.20%</td>
+      <td>59.70%</td>
+      <td>0.10%</td>
+      <td>-19.50%</td>
+      <td>-24.60%</td>
+      <td>5.10%</td>
+      <td>347,830</td>
+      <td>80.90%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Solid R</td>
+      <td>6.5</td>
+      <td>R Hold</td>
+      <td>34.9</td>
+      <td>59.7</td>
+      <td>39.5</td>
+      <td>58.8</td>
+      <td>41.2</td>
+      <td>57.7</td>
+      <td>4.6</td>
+      <td>6.3</td>
+      <td>1.7</td>
+      <td>Rural-suburban mix</td>
+      <td>Romney/Trump</td>
+      <td>-13</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>VA-7</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>7</td>
+      <td>R+6</td>
+      <td>Abigail Spanberger</td>
+      <td>D</td>
+      <td>1.0</td>
+      <td>176,079</td>
+      <td>169,295</td>
+      <td>4,429</td>
+      <td>50.30%</td>
+      <td>48.40%</td>
+      <td>1.30%</td>
+      <td>1.90%</td>
+      <td>-6.50%</td>
+      <td>8.40%</td>
+      <td>394,763</td>
+      <td>88.60%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Toss Up</td>
+      <td>7.9</td>
+      <td>D Flip</td>
+      <td>44.0</td>
+      <td>50.5</td>
+      <td>44.1</td>
+      <td>54.6</td>
+      <td>44.9</td>
+      <td>54.3</td>
+      <td>0.1</td>
+      <td>0.9</td>
+      <td>0.8</td>
+      <td>Rural-suburban mix</td>
+      <td>Romney/Trump</td>
+      <td>-6</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>VA-8</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>8</td>
+      <td>D+21</td>
+      <td>Don Beyer</td>
+      <td>D</td>
+      <td>0.0</td>
+      <td>247,137</td>
+      <td>76,899</td>
+      <td>712</td>
+      <td>76.10%</td>
+      <td>23.70%</td>
+      <td>0.20%</td>
+      <td>52.40%</td>
+      <td>51.80%</td>
+      <td>0.60%</td>
+      <td>373,446</td>
+      <td>87.00%</td>
+      <td>Obama</td>
+      <td>Clinton</td>
+      <td>Solid D</td>
+      <td>31.4</td>
+      <td>D Hold</td>
+      <td>73.5</td>
+      <td>20.9</td>
+      <td>67.8</td>
+      <td>31.0</td>
+      <td>66.3</td>
+      <td>32.8</td>
+      <td>5.7</td>
+      <td>7.2</td>
+      <td>1.5</td>
+      <td>Urban-suburban mix</td>
+      <td>Obama /Clinton</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>VA-9</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>9</td>
+      <td>R+19</td>
+      <td>Morgan Griffith</td>
+      <td>R</td>
+      <td>0.0</td>
+      <td>85,833</td>
+      <td>160,933</td>
+      <td>214</td>
+      <td>34.80%</td>
+      <td>65.20%</td>
+      <td>0.10%</td>
+      <td>-30.40%</td>
+      <td>-41.30%</td>
+      <td>10.90%</td>
+      <td>318,350</td>
+      <td>77.60%</td>
+      <td>Romney</td>
+      <td>Trump</td>
+      <td>Solid R</td>
+      <td>11.4</td>
+      <td>R Hold</td>
+      <td>27.3</td>
+      <td>68.8</td>
+      <td>34.9</td>
+      <td>63.1</td>
+      <td>39.7</td>
+      <td>58.9</td>
+      <td>7.6</td>
+      <td>12.4</td>
+      <td>4.8</td>
+      <td>Pure rural</td>
+      <td>Romney/Trump</td>
+      <td>-19</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>VA-10</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>10</td>
+      <td>D+1</td>
+      <td>Jennifer Wexton</td>
+      <td>D</td>
+      <td>0.0</td>
+      <td>206,356</td>
+      <td>160,841</td>
+      <td>598</td>
+      <td>56.10%</td>
+      <td>43.70%</td>
+      <td>0.20%</td>
+      <td>12.40%</td>
+      <td>9.80%</td>
+      <td>2.60%</td>
+      <td>408,608</td>
+      <td>90.00%</td>
+      <td>Romney</td>
+      <td>Clinton</td>
+      <td>Likely D</td>
+      <td>11.4</td>
+      <td>D Flip</td>
+      <td>52.2</td>
+      <td>42.2</td>
+      <td>48.8</td>
+      <td>49.9</td>
+      <td>49.6</td>
+      <td>49.6</td>
+      <td>3.4</td>
+      <td>2.6</td>
+      <td>0.8</td>
+      <td>Sparse suburban</td>
+      <td>Romney/Clinton</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>VA-11</td>
+      <td>Virginia</td>
+      <td>VA</td>
+      <td>11</td>
+      <td>D+15</td>
+      <td>Gerry Connolly</td>
+      <td>D</td>
+      <td>0.0</td>
+      <td>219,191</td>
+      <td>83,023</td>
+      <td>6,051</td>
+      <td>71.10%</td>
+      <td>26.90%</td>
+      <td>2.00%</td>
+      <td>44.20%</td>
+      <td>38.90%</td>
+      <td>5.30%</td>
+      <td>361,492</td>
+      <td>85.30%</td>
+      <td>Obama</td>
+      <td>Clinton</td>
+      <td>Solid D</td>
+      <td>29.2</td>
+      <td>D Hold</td>
+      <td>66.9</td>
+      <td>27.5</td>
+      <td>62.5</td>
+      <td>36.3</td>
+      <td>60.7</td>
+      <td>38.5</td>
+      <td>4.4</td>
+      <td>6.2</td>
+      <td>1.8</td>
+      <td>Dense suburban</td>
+      <td>Obama /Clinton</td>
+      <td>15</td>
+    </tr>
+  </tbody>
+</table>
