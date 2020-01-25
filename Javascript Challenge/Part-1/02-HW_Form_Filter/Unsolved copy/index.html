@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form>
+          <div class="form-group">
+            <label for="patient-form">Filter Patient Data by Blood Type</label>
+            <input class="form-control" id="patient-form-input" name="patient-form" type="text" placeholder="AB-">
+          </div>
+          <button id="button" type="button" class="btn btn-default">Filter Blood Data</button>
+          <button id="clear_data-btn" type="button" class="btn btn-default" onclick="window.location.href = 'https:/zachtspahr.github.io/Javascript Challenge/Part-1/01-HW_D3_Select/Unsolved/index.html'"> Go to other section of Pt 1 of HW</button>
+          <button id="clear_data-btn" type="button" class="btn btn-default" onclick="window.location.href = 'https://zachtspahr.github.io/Javascript%20Challenge/Part-2/Instructions/StarterCode/index%20copy.html'"> Go to Part 2 all filters</button>
+          
+          <button id="clear_data-btn" type="button" class="btn btn-default" onclick="window.location.href = 'https://zachtspahr.github.io/Javascript%20Challenge/Part-2/Instructions/StarterCode/index.html'"> Go to Pt 2 with just date filter</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Filtered Data Summary</h1>
+        <ul class="summary"></ul>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <!-- Student Grades -->
+          <table class="grades table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Blood Type</th>
+
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+  </div>
+</body>
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</html>
