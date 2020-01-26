@@ -142,11 +142,23 @@ var teams =  ['Raikkonen the dough',
 'Bianca Del Rio',
 'Slowey Logano'];
 
-for (var j = 0; j < 100000; j++) {
+
+
+var button = d3.select("#onehundredthousand")
+
+button.on("click", function() { 
+  var li2 = d3.select("ul").append("li");
+  li2.text("Here are my 100,000 random compliments:");
+  for (var j = 0; j < 100000; j++) {
   var li1 = d3.select("ul").append("li");
   li1.text(`Hello ${(teams[Math.floor(Math.random() * teams.length)])} , ${(compliments[Math.floor(Math.random() * compliments.length)])} `);
   
- 
 };
 
+  // Select the input element and get the raw HTML node
 
+ 
+ 
+}
+
+)
