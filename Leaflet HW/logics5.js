@@ -91,6 +91,7 @@ function markerSize(magnitude) {
       
     
       earthquakes.addTo(map);
+      console.log(earthquakes);
       function getColor(d) {
         return d > 6 ? 'orange' :
                 d > 5  ? 'red' :
@@ -143,6 +144,8 @@ d3.json(plates_url, function(platedata) {
 
   // Then add the tectonicplates layer to the map.
   plates.addTo(map);
-
+  
 });
+
+
 
